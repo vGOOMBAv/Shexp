@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:layout_gravity="center_vertical">
+
+    <Button
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:textSize="10dp"
+    android:text="Clear all tables"
+    android:background="@drawable/main_screen_buttons"
+    android:id="@+id/clearAllTablesID"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+    />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="10dp"
+        android:text="Add test users"
+        android:background="@drawable/main_screen_buttons"
+        android:id="@+id/addTestUsersID"/>
+
+</LinearLayout>

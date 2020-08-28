@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:weightSum="100">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:textColor="@color/colorBackround"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:fontFamily="@font/alata_regular"
+        android:text="NEW GLOBAL EVENT"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:orientation="vertical"
+        android:weightSum="200">
+
+        <EditText
+        android:background="@drawable/main_screen_buttons"
+        android:id="@+id/nameID"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:hint="Event name"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+    <EditText
+        android:id="@+id/descriptionID"
+        android:background="@drawable/main_screen_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:paddingLeft="10dp"
+        android:hint="Event description"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+    <androidx.appcompat.widget.SearchView
+        android:background="@drawable/main_screen_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:id="@+id/searchID"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+    <ListView
+        android:id="@+id/ListViewID"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorBackround"
+        android:layout_weight="70">
+
+    </ListView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:text="Add new Global Event"
+        android:background="@drawable/main_screen_buttons"
+        android:fontFamily="@font/alata_regular"
+        android:layout_gravity="center"
+        android:id="@+id/addNewGEbtnID"
+        android:layout_weight="20"/>
+
+    </LinearLayout>
+
+</LinearLayout>
