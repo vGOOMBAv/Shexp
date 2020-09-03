@@ -31,12 +31,28 @@ public class UserPage extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        //super.onBackPressed();
+        /*
         AlertDialog.Builder builder = new AlertDialog.Builder(UserPage.this);
-        builder.setTitle("Exit from app").setMessage("Are you sure you want to exit from the app");
-        builder.setPositiveButton("Yes", DialogInterface.OnClickListener() {
-            
+        builder.setTitle("Quit?");
+        builder.setMessage("Do you want to quit?");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(0);
+            }
         });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        */
     }
 
     @Override
