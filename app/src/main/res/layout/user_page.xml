@@ -77,17 +77,17 @@
                 android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:src="@drawable/ic_person_white"
                 android:layout_weight="23"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_settings_white"
-                android:id="@+id/settingID"/>
+                android:id="@+id/profileID"/>
             <ImageView
                 android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:src="@drawable/ic_person_white"
                 android:layout_weight="23"
-                android:id="@+id/profileID"/>
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings_white"
+                android:id="@+id/settingID"/>
             <ImageView
                 android:layout_marginTop="2dp"
                 android:layout_width="match_parent"

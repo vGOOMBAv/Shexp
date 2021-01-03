@@ -64,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String TABLE_NAME_UU = "UU";
     private static String COL_1_UU = "RECORD_ID";
     private static String COL_2_UU = "DEBTOR_ID";
-    private static String COL_3_UU = "PAYER_ID";
+    private static String COL_3_UU = "PAYER_ID"; //Person that pays for event
     private static String COL_4_UU = "EVENT_ID";
     private static String COL_5_UU = "SUM";
     private static String COL_6_UU = "HAS_PAYED";
@@ -479,8 +479,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     boolean addNewRecordToUUdb(Integer e_eventID, Integer e_adminID, Integer e_userID, float e_debt){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(COL_2_UU, e_adminID);
-        cv.put(COL_3_UU, e_userID);
+        cv.put(COL_2_UU, e_userID);
+        cv.put(COL_3_UU, e_adminID);
         cv.put(COL_4_UU, e_eventID);
         cv.put(COL_5_UU, e_debt);
         cv.put(COL_6_UU, 0);
@@ -517,4 +517,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+    //FinancePage functions
+    Cursor returnDebtors(Integer userID){
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("select * from "+ TABLE_NAME_UU+" where " + COL_3_UU + " == " + userID, null);
+    }
+    Cursor returnPeopleYouOwe(Integer userID){
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("select * from "+ TABLE_NAME_UU+" where " + COL_2_UU + " == " + userID, null);
+    }
+
 }

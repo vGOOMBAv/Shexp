@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:gravity="center|top">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:id="@+id/debtID"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata_regular"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorBackround"/>
+                <TextView
+                    android:id="@+id/peopleOweYouID"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata_regular"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorBackround"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/emojiID"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"/>
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="80"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:weightSum="100"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:text="Your owe to"
+                    android:gravity="center"
+                    android:textColor="@color/colorBackround"
+                    android:fontFamily="@font/alata_regular"
+                    android:textSize="25dp"
+                    />
+                <ListView
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/youOweToLvID"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:weightSum="100"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:text="Your debtors"
+                    android:gravity="center"
+                    android:textColor="@color/colorBackround"
+                    android:fontFamily="@font/alata_regular"
+                    android:textSize="25dp"
+                    />
+                <ListView
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/debtorsLvID"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

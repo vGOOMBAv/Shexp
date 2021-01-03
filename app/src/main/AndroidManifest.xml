@@ -37,8 +37,7 @@
         <activity
             android:name=".EventPage"
             android:windowSoftInputMode="adjustPan"/>
-
-
+        <activity android:name=".FinancePage"/>
     </application>
 
 

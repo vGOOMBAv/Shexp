@@ -79,6 +79,7 @@ public class UserPage extends AppCompatActivity {
         addNewElementListener();
         mListViewListener();
         showInterface();
+        financesListener();
     }
 
     public void userDataGetter(){
@@ -175,5 +176,20 @@ public class UserPage extends AppCompatActivity {
             }
             return totalSum;
         }
+    }
+
+    void financesListener(){
+        finances.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent;
+                        intent = new Intent(UserPage.this, FinancePage.class);
+                        intent.putExtra("LOCAL_USER_ID", userID.toString());
+
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 }
